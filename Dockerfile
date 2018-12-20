@@ -5,5 +5,7 @@ RUN \
     apk --no-cache --update add \
         bash openssh-client make git ncurses ncurses-libs nodejs yarn
 
+ENV TERM=xterm
+
 RUN mix local.hex --force && \
     mix local.rebar --force
