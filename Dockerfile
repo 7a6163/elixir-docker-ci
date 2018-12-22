@@ -3,7 +3,7 @@ FROM elixir:1.7-alpine
 RUN \
     apk update && \
     apk --no-cache --update add \
-        bash openssh-client git ncurses ncurses-libs nodejs yarn procps build-dependencies build-base gcc 
+        bash build-base openssh-client git ncurses nodejs procps yarn
 
 ENV TERM=xterm
 
