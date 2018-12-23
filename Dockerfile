@@ -7,5 +7,12 @@ RUN \
 
 ENV TERM=xterm
 
+RUN locale-gen C.UTF-8 || true
+ENV LANG=C.UTF-8
+
 RUN mix local.hex --force && \
     mix local.rebar --force
+
+CMD ["/bin/bash"]
+
+
